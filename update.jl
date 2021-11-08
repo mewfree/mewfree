@@ -21,6 +21,7 @@ function generate_graph(data)
         title = "BTC price last 24 hours",
         xlabel = "UNIX timestamp",
         ylabel = "\$ USD",
+        width = 60,
         canvas = DotCanvas,
         border = :ascii)
     fn = "graph.txt"
