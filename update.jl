@@ -11,7 +11,7 @@ end
 
 function format_data(json)
     prices = json["prices"]
-    Dict("x" => map(p->p[1], prices), "y" => map(p->p[2], prices))
+    Dict("x" => map(p->p[1] / 1000, prices), "y" => map(p->p[2], prices))
 end
 
 function generate_graph(data)
