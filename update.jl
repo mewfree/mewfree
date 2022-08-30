@@ -2,6 +2,7 @@ using Dates
 using UnicodePlots
 using HTTP
 using JSON
+using Diana
 
 function query_data(coin, from, to)
     url = "https://api.coingecko.com/api/v3/coins/$(coin)/market_chart/range?vs_currency=usd&from=$(from)&to=$(to)"
@@ -63,5 +64,36 @@ function git_commit_push()
 end
 
 ts = round(Int, time())
-query_data("bitcoin", ts - (60 * 60 * 24), ts) |> format_data |> generate_graph |> format_org |> write_org
+data = query_data("bitcoin", ts - (60 * 60 * 24), ts)
+data |> format_data |> generate_graph |> format_org |> write_org
 git_commit_push()
+
+gh_token = ENV["GH_TOKEN"]
+gh_client = GraphQLClient("https://api.github.com/graphql", auth="bearer $gh_token")
+query = """
+mutation(\$emoji: String!, \$message: String!, \$limited: Boolean!) {
+    changeUserStatus(input: {emoji: \$emoji, message: \$message, limitedAvailability: \$limited}) {
+        status {
+            message
+            emoji
+        }
+    }
+}
+"""
+
+function btc_going_up(data)
+    x = first(data["prices"])[2]
+    y = last(data["prices"])[2]
+
+    if y > x
+        true
+    else
+        false
+    end
+end
+
+if btc_going_up(data)
+    gh_client.Query(query, vars=Dict("emoji" => "📈", "message" => "BTC is going up!", "limited" => false))
+else
+    gh_client.Query(query, vars=Dict("emoji" => "📉", "message" => "BTC is going down...", "limited" => false))
+end
