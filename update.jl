@@ -25,10 +25,8 @@ function generate_graph(data)
         width=60,
         canvas=DotCanvas,
         border=:ascii)
-    fn = "graph.txt"
 
-    savefig(p, fn)
-    read(fn, String)
+    sprint(show, p)
 end
 
 function format_org(chart)
@@ -57,16 +55,13 @@ function write_org(org)
 end
 
 function git_commit_push()
-    run(`rm graph.txt`)
     run(`git add readme.org`)
     run(`git commit -m $(Dates.format(Dates.now(), "yyyy-mm-dd HH:MM"))`)
     run(`git push origin main`)
 end
 
 ts = round(Int, time())
-data = query_data("bitcoin", ts - (60 * 60 * 24), ts)
-data |> format_data |> generate_graph |> format_org |> write_org
-git_commit_push()
+data = query_data("bitcoin", ts - (60 * 60 * 24), ts) |> format_data
 
 gh_token = ENV["GH_TOKEN"]
 gh_client = GraphQLClient("https://api.github.com/graphql", auth="bearer $gh_token")
@@ -82,18 +77,13 @@ mutation(\$emoji: String!, \$message: String!, \$limited: Boolean!) {
 """
 
 function btc_going_up(data)
-    x = first(data["prices"])[2]
-    y = last(data["prices"])[2]
-
-    if y > x
-        true
-    else
-        false
-    end
+    x = first(data["y"])
+    y = last(data["y"])
+    y > x
 end
 
-if btc_going_up(data)
-    gh_client.Query(query, vars=Dict("emoji" => "📈", "message" => "BTC is going up!", "limited" => false))
-else
-    gh_client.Query(query, vars=Dict("emoji" => "📉", "message" => "BTC is going down...", "limited" => false))
-end
+message, emoji = btc_going_up(data) ? ("BTC is going up!", "📈") : ("BTC is going down...", "📉")
+gh_client.Query(query, vars=Dict("emoji" => emoji, "message" => message, "limited" => false))
+
+data |> generate_graph |> format_org |> write_org
+git_commit_push()
