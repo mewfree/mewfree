@@ -43,6 +43,33 @@ function format_org(chart)
 🧑‍💻 I'm Damien
 
 ✍️ I blog at [[https://www.damiengonot.com][damiengonot.com]]
+
+* 💻 Projects
+** 🛠️ Tools
+- [[https://github.com/mewfree/youtube-dl-subscriptions][youtube-dl-subscriptions]] – Download all new videos from your YouTube subscriptions
+- [[https://github.com/mewfree/llm-review][llm-review]] – Reads my daily journal every night and emails me recommendations for a better next day
+- [[https://github.com/mewfree/tabathon][tabathon]] – Browser extension that sums up the duration of YouTube videos you have open
+- [[https://github.com/mewfree/mileend-roulette][mileend-roulette]] – Food roulette for the Mile End neighborhood of Montréal
+- [[https://github.com/mewfree/org-autolink][org-autolink]] – Emacs company-mode backend to auto-link org-mode files
+- [[https://github.com/mewfree/sheetimport][sheetimport]] – Import local CSV files into Google Spreadsheet
+- [[https://github.com/mewfree/motivateme][motivateme]] – Display a random motivational quote
+- [[https://github.com/mewfree/forex-rates-cache][forex-rates-cache]] – Caches openexchangerates.org in Redis
+
+** 🐈 Advent of Meow
+- [[https://github.com/mewfree/advent-of-meow-2025][2025]] (OCaml)
+- [[https://github.com/mewfree/advent-of-meow-2024][2024]] (Ruby)
+- [[https://github.com/mewfree/advent-of-meow-2023][2023]] (Ruby)
+- [[https://github.com/mewfree/advent-of-meow-2022][2022]] (Julia)
+- [[https://github.com/mewfree/advent-of-meow-2021][2021]] (Julia)
+- [[https://github.com/mewfree/advent-of-meow-2020][2020]] (Julia)
+- [[https://github.com/mewfree/advent-of-meow-2019][2019]] (Racket)
+- [[https://github.com/mewfree/advent_of_meow_2017][2017]] (Elixir)
+- [[https://github.com/mewfree/advent-of-meow-2016][2016]] (Python)
+- [[https://github.com/mewfree/advent-of-meow][2015]] (Ruby)
+
+** 🧑‍💻 Personal
+- [[https://github.com/mewfree/dotfiles][dotfiles]] – Config files
+- [[https://github.com/mewfree/resume][resume]] – My resume ([[https://www.damiengonot.com/damiengonot_resume.pdf][PDF]])
 """
 
     header * chart * footer
