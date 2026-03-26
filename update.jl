@@ -46,6 +46,9 @@ function format_org(chart)
 
 * 💻 Projects
 ** 🛠️ Tools
+- [[https://github.com/mewfree/clignote][clignote]] – Terminal org-mode editor
+- [[https://github.com/mewfree/rugit][rugit]] – Terminal UI for Git and Jujutsu
+- [[https://github.com/mewfree/pronto][pronto]] – CLI task manager for org-mode
 - [[https://github.com/mewfree/youtube-dl-subscriptions][youtube-dl-subscriptions]] – Download all new videos from your YouTube subscriptions
 - [[https://github.com/mewfree/llm-review][llm-review]] – Reads my daily journal every night and emails me recommendations for a better next day
 - [[https://github.com/mewfree/tabathon][tabathon]] – Browser extension that sums up the duration of YouTube videos you have open
@@ -55,7 +58,7 @@ function format_org(chart)
 - [[https://github.com/mewfree/motivateme][motivateme]] – Display a random motivational quote
 - [[https://github.com/mewfree/forex-rates-cache][forex-rates-cache]] – Caches openexchangerates.org in Redis
 
-** 🐈 Advent of Meow
+** 🎄 Advent of Code
 - [[https://github.com/mewfree/advent-of-meow-2025][2025]] (OCaml)
 - [[https://github.com/mewfree/advent-of-meow-2024][2024]] (Ruby)
 - [[https://github.com/mewfree/advent-of-meow-2023][2023]] (Ruby)
