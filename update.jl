@@ -45,6 +45,12 @@ function format_org(chart)
 ✍️ I blog at [[https://www.damiengonot.com][damiengonot.com]]
 
 * 💻 Projects
+** 🌐 Products
+- [[https://sheetgpt.net][SheetGPT]] – Control Google Sheets with AI
+- [[https://sheetfx.net][SheetFX]] – Free guides and tutorials to learn Google Sheets
+- [[https://palabres.net][Palabres]] – Every leading AI model, in one subscription
+- [[https://campfire.mewfree.com][Campfire]] – A faster way to run Ads Manager
+
 ** 🛠️ Tools
 - [[https://github.com/mewfree/clignote][clignote]] – Terminal org-mode editor
 - [[https://github.com/mewfree/rugit][rugit]] – Terminal UI for Git and Jujutsu
