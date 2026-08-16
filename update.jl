@@ -51,6 +51,7 @@ function format_org(chart)
 - [[https://palabres.net][Palabres]] – Every leading AI model, in one subscription
 - [[https://campfire.mewfree.com][Campfire]] – A faster way to run Ads Manager
 - [[https://panneaux.quebec][Panneaux.quebec]] – Reference guide to Québec road signs
+- [[https://mixenergie.ca][mixenergie.ca]] – Visualize Quebec's electricity mix, more provinces soon
 
 ** 🛠️ Tools
 - [[https://github.com/mewfree/clignote][clignote]] – Terminal org-mode editor
