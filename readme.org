@@ -40,6 +40,7 @@
 ** 🛠️ Tools
 - [[https://github.com/mewfree/clignote][clignote]] – Terminal org-mode editor
 - [[https://github.com/mewfree/rugit][rugit]] – Terminal UI for Git and Jujutsu
+- [[https://github.com/mewfree/mijote][mijote]] – Terminal UI to run multiple coding agents side by side
 - [[https://github.com/mewfree/pronto][pronto]] – CLI task manager for org-mode
 - [[https://github.com/mewfree/youtube-dl-subscriptions][youtube-dl-subscriptions]] – Download all new videos from your YouTube subscriptions
 - [[https://github.com/mewfree/llm-review][llm-review]] – Reads my daily journal every night and emails me recommendations for a better next day
